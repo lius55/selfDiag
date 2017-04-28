@@ -1,0 +1,146 @@
+@charset "utf-8";
+body{
+	margin: 0px;
+	font-family: 'メイリオ';
+}
+
+/* レスポンジブ対応 */
+.pc { display:block; }
+.sp { display:none; }
+
+@media screen and (max-width:750px) {
+	/* SP版 */
+	.pc{display:none;}
+	.sp{display:block;}
+}
+
+@media not screen , (min-width: 751px) {
+	/* PC版 */
+	body {
+		background:url(../img/pc/bg.png) center top repeat-x;
+		/* TODO zoomは本当に必要？ */
+		background-size: 100% 118%;
+		zoom: 80%;
+	}
+	.header {
+		background:url(../img/pc/header.png) center top no-repeat;
+		height: 111px;
+	}
+	.content {
+		background:url(../img/pc/content-bg.png) center top no-repeat;
+		height: 646px;
+	}
+	.content-title {
+		background:url(../img/pc/content-title.png) center top no-repeat;
+		height: 40px;
+		top: 70px;
+		position: relative;
+	}
+	.content-check {
+		background:url(../img/pc/content-check.png) center top no-repeat;
+		height: 125px;
+		top: 80px;
+		position: relative;
+	}
+	.content-start {
+		background:url(../img/pc/content-start.png) center top no-repeat;
+		height: 231px;
+		top: 110px;
+		position: relative;
+	}
+	.start {
+		background:url(../img/pc/btn-green.png) center top no-repeat;
+		text-align: center;
+		top: 105px;
+		position: relative;
+		height: 106px;
+		padding-top: 29px;
+	}
+	.btn-start {
+		border: none;
+		text-align: center;
+	    text-decoration: none;
+	    color: white;
+	    font-size: 35px;
+	    font-weight: bold;
+		letter-spacing: 8px;
+	    text-shadow: 1px 1px 4px #808080;
+	}
+	.btn-start:hover {
+		cursor: pointer;
+		text-shadow: 1px 2px 8px #808080;
+	}
+	.start,.answer-btn:active {
+		top: 3px;
+		position: relative;
+	}
+	.content-navi {
+	    text-align: center;
+	    padding-top: 70px;
+	    position: relative;
+	}
+	.question-title {
+		padding-top: 17px;
+	    border-image: url(../img/pc/line.png) 13;
+	    text-align: center;
+	    border-style: solid;
+	    /* border-image-repeat: space; */
+	    border-top: none;
+	    border-image-width: 3;
+	    border-image-outset: 10px;
+	    color: red;
+	    font-size: 30px;
+	    margin: 0 auto;
+	    width: 665px;
+	}
+	.question {
+		border-image: url(../img/pc/line.png) 13;
+		text-align: center;
+		border-style: solid;
+	    /*border-image-repeat: space;*/
+	    border-top: none;
+	    border-image-width: 3;
+	    border-image-outset: 20px;
+	    font-size: 30px;
+	    width: 640px;
+	    margin: 0 auto;
+	    padding-top: 40px;
+	}
+	.answer {
+		text-align: center;
+		padding-top: 15px;
+	}
+	.answer-btn {
+		background:url(../img/pc/btn-green-sm.png) center top no-repeat;
+		text-align: center;
+		height: 106px;
+		width: 297px;
+		display: inline-block;
+		padding-top: 12px;
+		margin: 0px 30px;
+	}
+	.answer-msg {
+		text-align: center;
+		padding-top: 35px;
+	}
+	.restart {
+		text-align: center;
+	}
+	.restart-btn {
+		background:url(../img/pc/btn-grey.png) center top no-repeat;
+		height: 44px;
+		padding-top: 10px;
+		color: white;
+		font-size: 14px;
+		font-weight: bold;
+		text-shadow: 1px 1px 4px #808080;
+	}
+	.restart-btn:hover {
+		cursor: pointer;
+		text-shadow: 1px 2px 8px #808080;
+	}
+	.restart-btn:active {
+		top: 3px;
+		position: relative;
+	}
+}
