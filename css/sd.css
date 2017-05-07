@@ -256,10 +256,7 @@ body{
 		margin-top: 60px;
 		margin-bottom: 70px;
 	}
-	.btn-save:hover {
-		text-shadow: 1px 1px 4px #808080;		
-	}
-	.btn-save:hover {
+	.save:hover,.btn-save:hover {
 		cursor: pointer;
 		text-shadow: 1px 2px 8px #808080;		
 	}
