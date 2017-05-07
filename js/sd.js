@@ -1,8 +1,3 @@
-String.prototype.replaceAll = function(search, replacement) {
-    var target = this;
-    return target.replace(new RegExp(search, 'g'), replacement);
-};
-
 $(function(){
 
 	// 質問リスト
@@ -481,7 +476,7 @@ $(function(){
 	$("#start-section").on("click", ".start", function() {
 		$("#start-section").hide();
 		$("#question-section").show();
-		showQuestion();
+		showQuestion(0);
 	});
 
 	// 最初からやり直す
@@ -570,12 +565,12 @@ $(function(){
 	});
 
 	// 質問表示
-	var showQuestion = function(qNum = 0) {
+	var showQuestion = function(qNum) {
 		var question = questionList[qNum];
 		question.qNum = qNum;
 		$("#question-section").empty();
 		$("#question-template").tmpl(question).appendTo("#question-section");
-	}
+	};
 
 	// 結果を画像として保存
 	$("#result-section").on("click", ".save", function() {
