@@ -492,8 +492,8 @@ $(function(){
 		answerList = new Array();
 	});
 
-	var aggGroup = ["a","b","c","d","e","f","g","h","i"];
-	var sendGroup = ["j", "k", "l", "m"];
+	var fstGroup = ["a","b","c","d","e","f","g","h","i"];
+	var sndGroup = ["j", "k", "l", "m"];
 
 	// 質問答える
 	$("#question-section").on("click", ".answer-btn", function() {
@@ -506,11 +506,11 @@ $(function(){
 		// if (++currentQstNum >= questionList.length) {
 		// ------------------------------------
 		if (true) {
-			for(var i = 0; i < aggGroup.length; i++) {
-				for (var j = 0; j < 15; j++) { answerList.push( { group: aggGroup[i], value: "Y" }); }
+			for(var i = 0; i < fstGroup.length; i++) {
+				for (var j = 0; j < 15; j++) { answerList.push( { group: fstGroup[i], value: "Y" }); }
 			}
-			for(var i = 0; i < sendGroup.length; i++) {
-				for (var j = 0; j < 5; j++) { answerList.push( { group: sendGroup[i], value: "Y" }); }
+			for(var i = 0; i < sndGroup.length; i++) {
+				for (var j = 0; j < 5; j++) { answerList.push( { group: sndGroup[i], value: "Y" }); }
 			}
 		// ------------------------------------
 			// 答え終了、結果集計する
@@ -519,8 +519,8 @@ $(function(){
 			// A-Iまでもっともはいが多いカテゴリ
 			var maxGroupNum = 0;
 			var maxGroup = '';
-			for (var i = 0; i < aggGroup.length; i++) {
-				var group = aggGroup[i];
+			for (var i = 0; i < fstGroup.length; i++) {
+				var group = fstGroup[i];
 				var groupNum = 0;
 				$.each(answerList, function(index, element) {
 					if (group == element.group && element.value == "Y") {
@@ -536,8 +536,8 @@ $(function(){
 			console.log("maxGroup=" + maxGroup);
 			resultPattern += maxGroup;
 
-			for (var i = 0; i < sendGroup.length; i++) {
-				var group = sendGroup[i];
+			for (var i = 0; i < sndGroup.length; i++) {
+				var group = sndGroup[i];
 				var yesNum = 0;
 				$.each(answerList, function(index, element) {
 					if (group == element.group && element.value == "Y") {
