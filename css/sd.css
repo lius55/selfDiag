@@ -297,7 +297,7 @@ body{
 	.content-check {
 		background:url(../img/sp/content-check.png) center top no-repeat;
 		height: 220px;
-		top: 50px;
+		top: 40px;
 		position: relative;
 		background-size: 85%;
 	}
@@ -311,12 +311,13 @@ body{
 	.start {
 		background:url(../img/sp/btn-green.png) center top no-repeat;
 		text-align: center;
-		top: 20px;
-		/*position: relative;*/
+		top: 25px;
+		position: relative;
 		height: 145px;
 		padding-top: 29px;
 		background-size: 85%;
 		margin-top: 25px;
+		vertical-align: middle;
 	}
 	.btn-start {
 		border: none;
@@ -332,7 +333,10 @@ body{
 		cursor: pointer;
 		text-shadow: 1px 2px 8px #808080;
 	}
-	.start:active, .answer-btn:active {
+	.start:active {
+		top: 28px;
+	}
+	.answer-btn:active {
 		top: 3px;
 		position: relative;
 	}
