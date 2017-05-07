@@ -107,7 +107,7 @@
 		<img src="img/sp/nav-${group}.png" class="sp" />
 	</div>
 	<div class="question-title">
-		Q：XXXX(全155)
+		Q${sno}(全${gqno}問)
 	</div>
 	<div class="question">
 		<div>${qNum+1}の質問にお答えください。</div>
@@ -134,6 +134,8 @@
 	<div class="title">あなたのたいぷは</div>
 
 	<div class="result-type">
+	<div class="type-btn">人格</div>
+	<div class="type-content">${character.character}</div>
 	<div class="type-btn">性格</div>
 	<div class="type-content">${character.temper}</div>
 	<div class="type-btn">強み</div>
