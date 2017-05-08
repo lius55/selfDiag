@@ -7,15 +7,17 @@
 <link rel="stylesheet" type="text/css" href="css/sd.css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="js/sd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha2/html2canvas.js"></script>
 </head>
 <body>
 
-<div class="header">
-	<!-- <img src="img/pc/header.png"> -->
-</div>
+<div class="header"></div>
 
 <div class="content-result" id="result-section" style="display: block;">
-	<img src="img/pc/clip.png" class="result-clip pc" />
+<img src="img/pc/clip.png" class="result-clip pc" />
+	<div id="capture" style="background:url(img/pc/result-bg.png) center top repeat-y; padding-top: 10px;">
+	
 	<div class="result-title">
 		<img src="img/pc/result-title.png"  class="pc" />
 		<img src="img/sp/result-title.png"  class="sp" />
@@ -34,7 +36,7 @@
 	<div class="title">診断結果の詳細</div>
 	<div class="result-text">
 	あなたは完璧を求めて、何事にも向上心を持ち正確に仕事をこなしていく【完璧主義】タイプです。
-	<br/><br/>
+	<br/><br/>\n\n
 	その真面目さと正確に実行をする点からどのビジネスモデルのノウハウを実践しても結果を出すことができるでしょう。
 	<br/><br/>
 	仕事においては依頼されたことを最後まで実践をする責任感があるので、周りから信頼はされますが、１度にたくさん頼まれると
@@ -67,6 +69,7 @@
 	</div>
 
 	<div class="save"><a class="btn-save">結果を画像で保存する</a></div>
+	</div>
 </div>
 
 </body>
