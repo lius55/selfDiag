@@ -574,13 +574,15 @@ $(function(){
 
 	// 結果を画像として保存
 	$("#result-section").on("click", ".save", function() {
-		html2canvas($("#capture"), {
+		// html2canvas($("#capture"), {
+		html2canvas(document.body, {
 	        onrendered: function(canvas){
 	          	//aタグのhrefにキャプチャ画像のURLを設定
 	          	// document.getElementById("ss").href = canvas.toDataURL("image/png");
 				var link = document.createElement('a');
 			    link.href = canvas.toDataURL("image/jpg");
 			    link.click();
+			    // TODO IE対応
 			     // document.body.appendChild(canvas);
 	        }
 	    });

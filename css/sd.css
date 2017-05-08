@@ -135,6 +135,7 @@ body{
 	}
 	.restart-btn {
 		background:url(../img/pc/btn-grey.png) center top no-repeat;
+		background-size:contain;
 		height: 44px;
 		padding-top: 10px;
 		color: white;
@@ -152,17 +153,25 @@ body{
 		top: 3px;
 		position: relative;
 	}
+	.content-result-outter {
+		background: url(../img/pc/body-bg.png) repeat;
+		padding-bottom: 50px;
+	}
 	.content-result {
-		min-height: 946px;
-		margin: 0 auto;
-		width: 930px;
-		text-align: center;
-		border-radius: 15px;
-		border-image: url("../img/pc/border.png") 20;
-		border-style: solid;
-		border-width: 20px;
-		background:url(../img/pc/result-bg.png) center top repeat-y;
-		margin-bottom: 50px;
+	    min-height: 946px;
+	    margin: 0 auto;
+	    width: 930px;
+	    text-align: center;
+	    border-radius: 15px; 
+	    /* border-image: url(../img/pc/border.png) 20; */
+	    /* border-style: solid; */
+	    /* border-width: 20px; */
+	    background: url(../img/pc/result-bg-border.png) center top repeat-y;
+	    padding: 20px;
+	}
+	.content-result-inner {
+	    background: url(../img/pc/result-bg.png) top repeat-y;
+    	padding-bottom: 50px;
 	}
 	.result-clip {
 		top: -35px;
@@ -260,7 +269,7 @@ body{
 		padding-top: 23px;
 		font-weight: bold;
 		margin-top: 60px;
-		margin-bottom: 70px;
+		/*margin-bottom: 70px;*/
 	}
 	.save:hover,.btn-save:hover {
 		cursor: pointer;
@@ -428,20 +437,24 @@ body{
 		margin: 0 auto;
 		/*width: 565px;*/
 		text-align: center;
-		border-image: url("../img/sp/border.png") 17;
-		border-style: solid;
-		border-width: 17px;
-		background:url(../img/pc/result-bg.png) center top repeat-y;
+		/*border-image: url("../img/sp/border.png") 17;*/
+		/*border-style: solid;*/
+		/*border-width: 17px;*/
+		background:url(../img/sp/result-bg-border.png) center top repeat-y;
 		margin-bottom: 0px;
 	    /*position: relative;*/
-	    border-image-slice: 60 20 20 20;
-		border-top-width: 60px;
-		backface-visibility: hidden;
+	    /*border-image-slice: 60 20 20 20;*/
+		/*border-top-width: 60px;*/
+		/*backface-visibility: hidden;*/
+		padding: 17px;
+	}
+	.content-result-inner {
+
 	}
 	.result-clip {
 	    margin: 0 auto;
+	    position: relative;
 	    top: -30px;
-		display: none;
 	}
 	.result-title {
 	    margin-bottom: 50px;
