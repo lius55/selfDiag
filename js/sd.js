@@ -497,10 +497,11 @@ $(function(){
 			group: $(this).attr("group"),
 			value: $(this).attr("value")
 		}
-		// answerList.push(result);
-		// if (++currentQstNum >= questionList.length) {
+		
+		answerList.push(result);
+		if (++currentQstNum >= questionList.length) {
 		// ------------------------------------
-		if (true) {
+		// if (true) {
 			for(var i = 0; i < fstGroup.length; i++) {
 				for (var j = 0; j < 15; j++) { answerList.push( { group: fstGroup[i], value: "Y" }); }
 			}
@@ -584,6 +585,7 @@ $(function(){
 			    link.click();
 			    // TODO IE対応
 			     // document.body.appendChild(canvas);
+			    (window.URL || window.webkitURL).revokeObjectURL(downloadUrl);
 	        }
 	    });
 

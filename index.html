@@ -8,7 +8,7 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
 <script type="text/javascript" src="js/sd.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.0/html2canvas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha2/html2canvas.js"></script>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
 	<div class="start"><a class="btn-start">診断スタート</a></div>
 </div>
 
-<div class="content" id="question-section" style="display: none;">
+<div class="question-content" id="question-section" style="display: none;">
 	<div class="content-navi">
 		<img src="img/pc/nav-a.png" class="pc" />
 		<img src="img/sp/nav-a.png" class="sp" width="" />
@@ -46,7 +46,7 @@
 	</div>
 </div>
 
-<div class="content-result" id="result-section" style="display: none;">
+<div class="content-result-outter" id="result-section" style="display: none;">
 	<img src="img/pc/clip.png" class="result-clip pc" />
 	<img src="img/pc/clip.png" class="result-clip sp" />
 	<div class="result-title">
@@ -103,6 +103,7 @@
 </div>
 
 <script type="text/html" id="question-template">
+	<img src="img/pc/clip.png" class="result-clip pc" />
 	<div class="content-navi">
 		<img src="img/pc/nav-${group}.png" class="pc" />
 		<img src="img/sp/nav-${group}.png" class="sp" />
@@ -127,36 +128,41 @@
 </script>
 
 <script type="text/html" id="result-template">
-	<img src="img/pc/clip.png" class="result-clip pc" />
-	<div class="result-title">
-		<img src="img/pc/result-title.png"  class="pc" />
-		<img src="img/sp/result-title.png"  class="sp" />
+	<div class="content-result">
+	<div class="content-result-inner">
+		<img src="img/pc/clip.png" class="result-clip pc" />
+		<img src="img/pc/clip.png" class="result-clip sp" />
+		<div class="result-title">
+			<img src="img/pc/result-title.png"  class="pc" />
+			<img src="img/sp/result-title.png"  class="sp" />
+		</div>
+		<div class="title">あなたのたいぷは</div>
+
+		<div class="result-type">
+		<div class="type-btn">人格</div>
+		<div class="type-content">${character.character}</div>
+		<div class="type-btn">性格</div>
+		<div class="type-content">${character.temper}</div>
+		<div class="type-btn">強み</div>
+		<div class="type-content">${character.strength}</div>
+		<div class="type-btn">弱み</div>
+		<div class="type-content">${character.weakness}</div>
+		</div>
+
+		<div class="title">診断結果の詳細</div>
+		<div class="result-text">{{html character.detail}}</div>
+
+		<div class="title">あなたにオススメのビジネスは</div>
+		<div class="business-title"><div>1.${businessType[0].bName}</div></div>
+		<div class="business-text">${businessType[0].detail}</div>
+		<div class="business-title"><div>2.${businessType[1].bName}</div></div>
+		<div class="business-text">${businessType[1].detail}</div>
+		<div class="business-title"><div>3.${businessType[2].bName}</div></div>
+		<div class="business-text">${businessType[2].detail}</div>
+
+		<div class="save"><a class="btn-save">結果を画像で保存する</a></div>
 	</div>
-	<div class="title">あなたのたいぷは</div>
-
-	<div class="result-type">
-	<div class="type-btn">人格</div>
-	<div class="type-content">${character.character}</div>
-	<div class="type-btn">性格</div>
-	<div class="type-content">${character.temper}</div>
-	<div class="type-btn">強み</div>
-	<div class="type-content">${character.strength}</div>
-	<div class="type-btn">弱み</div>
-	<div class="type-content">${character.weakness}</div>
 	</div>
-
-	<div class="title">診断結果の詳細</div>
-	<div class="result-text">{{html character.detail}}</div>
-
-	<div class="title">あなたにオススメのビジネスは</div>
-	<div class="business-title"><div>1.${businessType[0].bName}</div></div>
-	<div class="business-text">${businessType[0].detail}</div>
-	<div class="business-title"><div>2.${businessType[1].bName}</div></div>
-	<div class="business-text">${businessType[1].detail}</div>
-	<div class="business-title"><div>3.${businessType[2].bName}</div></div>
-	<div class="business-text">${businessType[2].detail}</div>
-
-	<div class="save"><a class="btn-save">結果を画像で保存する</a></div>
 </script>
 </body>
 </html>

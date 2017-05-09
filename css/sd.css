@@ -33,6 +33,16 @@ body{
 		background:url(../img/pc/content-bg.png) center top no-repeat;
 		height: 646px;
 	}
+	.question-content {
+	    background: url(../img/pc/result-bg.png) repeat;
+	    border-image: url(../img/pc/border.png) 20;
+	    border-width: 20px;
+	    border-image-slice: 20;
+	    border-style: solid;
+	    max-width: 962px;
+	    margin: 0 auto;
+	    margin-bottom: 20px;
+	}
 	.content-title {
 		background:url(../img/pc/content-title.png) center top no-repeat;
 		height: 40px;
@@ -83,7 +93,7 @@ body{
 	}
 	.content-navi {
         text-align: center;
-	    padding-top: 70px;
+	    /*padding-top: 70px;*/
 	    position: relative;
 	    margin: 0 auto;
 	    width: 594px;
@@ -144,6 +154,7 @@ body{
 		text-shadow: 1px 1px 4px #808080;
 	    width: 257px;
 	    margin: 0 auto;
+	    margin-bottom: 50px;
 	}
 	.restart-btn:hover {
 		cursor: pointer;
@@ -290,18 +301,18 @@ body{
 		/*background-size: 100% auto;*/
 		/*margin-bottom: -1px;*/
 	}
-	.content {
-		background:url(../img/pc/result-bg.png) center top no-repeat;
-		height: 726px;
-		background-size: 100% 100%;
-		text-align: center;
-		border-image: url("../img/sp/border.png") 17;
-		border-style: solid;
-		border-width: 17px;
-		background:url(../img/pc/result-bg.png) center top repeat-y;
-		border-image-slice: 60 20 20 20;
-		border-top-width: 60px;
-		backface-visibility: hidden;
+	.content,.question-content {
+		background: url(../img/pc/result-bg.png) center top no-repeat;
+	    background-size: 100% 100%;
+	    text-align: center;
+	    border-image: url(../img/sp/border.png) 17;
+	    border-style: solid;
+	    border-width: 17px;
+	    background: url(../img/pc/result-bg.png) center top repeat-y;
+	    border-image-slice: 60 20 20 20;
+	    border-top-width: 60px;
+	    /*backface-visibility: hidden;*/
+	    padding-bottom: 50px;
 	}
 	.content-title {
 		background:url(../img/sp/content-title.png) center top no-repeat;
@@ -329,9 +340,9 @@ body{
 		top: 25px;
 		position: relative;
 		height: 145px;
-		padding-top: 29px;
+		padding-top: 35px;
 		background-size: 85%;
-		margin-top: 25px;
+		margin-top: 50px;
 		vertical-align: middle;
 	}
 	.btn-start {
@@ -365,31 +376,29 @@ body{
 	    margin: 0 auto;
 	}
 	.question-title {
-		padding-top: 17px;
-	    border-image: url(../img/pc/line.png) 13;
+	    padding-top: 17px;
+	    /* border-image: url(../img/pc/line.png) 13; */
 	    text-align: center;
-	    border-style: solid;
-	    border-top: none;
-	    border-image-width: 6;
-	    border-image-outset: 10px;
+	    /* border-style: solid; */
+	    /* border-top: none; */
+	    /* border-image-width: 6; */
+	    /* border-image-outset: 10px; */
 	    color: red;
 	    font-size: 28px;
 	    margin: 0 auto;
 	    width: 500px;
 	    padding-bottom: 15px;
+	    margin-top: 30px;
 	}
 	.question {
-		border-image: url(../img/pc/line.png) 13;
-		text-align: center;
-		border-style: solid;
-	    border-top: none;
-        border-image-width: 5;
-	    border-image-outset: 5px;
+	    text-align: center;
 	    font-size: 28px;
 	    width: 500px;
 	    margin: 0 auto;
-	    padding-top: 40px;
-	    padding-bottom: 15px;
+	    padding-top: 30px;
+	    padding-bottom: 30px;
+	    border-bottom: 2px solid #c27070;
+	    border-top: 2px solid #c27070;
 	}
 	.answer {
 		text-align: center;
@@ -399,9 +408,9 @@ body{
 	.answer-btn {
 		background: url(../img/sp/btn-green.png) center top no-repeat;
 	    text-align: center;
-	    margin: 0px 30px;
+	    margin: 40px 30px;
 	    height: 105px;
-	    padding-top: 25px;
+	    padding-top: 30px;
 	    background-size: 85%;
 	}
 	.restart {
@@ -412,7 +421,6 @@ body{
 	.restart-btn {
 		background:url(../img/sp/btn-grey.png) center top no-repeat;
 		height: 106px;
-		padding-top: 18px;
 		color: white;
 		font-size: 25px;
 		font-weight: bold;
@@ -420,6 +428,7 @@ body{
 	    background-size: 85%;
 	    margin: 0 auto;
         margin: 0px 30px;
+		padding-top: 25px;
 	}
 	.restart-btn:hover {
 		cursor: pointer;
@@ -430,26 +439,18 @@ body{
 		position: relative;
 	}
 	#question-section {
-		height: 870px;
+		/*height: 870px;*/
 	}
 	.content-result {
-		/*min-height: 946px;*/
 		margin: 0 auto;
-		/*width: 565px;*/
 		text-align: center;
-		/*border-image: url("../img/sp/border.png") 17;*/
-		/*border-style: solid;*/
-		/*border-width: 17px;*/
 		background:url(../img/sp/result-bg-border.png) center top repeat-y;
 		margin-bottom: 0px;
-	    /*position: relative;*/
-	    /*border-image-slice: 60 20 20 20;*/
-		/*border-top-width: 60px;*/
-		/*backface-visibility: hidden;*/
 		padding: 17px;
 	}
 	.content-result-inner {
-
+	    background: url(../img/pc/result-bg.png) top repeat-y;
+    	padding-bottom: 50px;
 	}
 	.result-clip {
 	    margin: 0 auto;
@@ -458,22 +459,18 @@ body{
 	}
 	.result-title {
 	    margin-bottom: 50px;
-	    margin-top: 50px;
 	}
 	.result-title img {
 		margin: 0 auto;
 	}
 	.title {
-	    padding: 10px 0px;
-	    border-image: url(../img/pc/line.png) 13;
-	    border-top: none;
-	    border-image-width: 3;
-	    border-image-outset: 20px;
-	    border-style: solid;
+		padding: 20px 0px;
 	    font-size: 50px;
 	    font-weight: bold;
 	    margin: 0 50px;
 	    margin-bottom: 30px;
+	    border-bottom: 2px solid #c27070;
+	    border-top: 2px solid #c27070;
 	}
 	.result-type {
 	    margin-top: 10px;
@@ -494,9 +491,9 @@ body{
 	    padding-top: 45px;
 	}
 	.type-content {
-	    width: 470px;
 	    margin: 0 auto;
 	    text-align: left;
+	    margin: 0 45px;
 	}
 	.result-text {
 	    margin: 0 auto;
