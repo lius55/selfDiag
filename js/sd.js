@@ -355,15 +355,15 @@ $(function(){
 		"gYYNN":{character: characterList.g, businessType: [btList[14],btList[9], btList[7]]} ,
 		"hYYNN":{character: characterList.h, businessType: [btList[7], btList[13],btList[9]]} ,
 		"iYYNN":{character: characterList.i, businessType: [btList[6], btList[13],btList[8]]} ,
-		"aNYYY":{character: characterList.a, businessType: [btList[1], btList[17],btList[0]]} ,
-		"bNYYY":{character: characterList.b, businessType: [btList[17],btList[6], btList[2]]} ,
-		"cNYYY":{character: characterList.c, businessType: [btList[9], btList[17],btList[1]]} ,
-		"dNYYY":{character: characterList.d, businessType: [btList[2], btList[6], btList[13]]} ,
-		"eNYYY":{character: characterList.e, businessType: [btList[10],btList[0], btList[17]]} ,
-		"fNYYY":{character: characterList.f, businessType: [btList[1], btList[17],btList[10]]} ,
-		"gNYYY":{character: characterList.g, businessType: [btList[10],btList[2], btList[6]]} ,
-		"hNYYY":{character: characterList.h, businessType: [btList[17],btList[9], btList[2]]} ,
-		"iNYYY":{character: characterList.i, businessType: [btList[0], btList[10],btList[6]]} ,
+		"aYNYY":{character: characterList.a, businessType: [btList[1], btList[17],btList[0]]} ,
+		"bYNYY":{character: characterList.b, businessType: [btList[17],btList[6], btList[2]]} ,
+		"cYNYY":{character: characterList.c, businessType: [btList[9], btList[17],btList[1]]} ,
+		"dYNYY":{character: characterList.d, businessType: [btList[2], btList[6], btList[13]]} ,
+		"eYNYY":{character: characterList.e, businessType: [btList[10],btList[0], btList[17]]} ,
+		"fYNYY":{character: characterList.f, businessType: [btList[1], btList[17],btList[10]]} ,
+		"gYNYY":{character: characterList.g, businessType: [btList[10],btList[2], btList[6]]} ,
+		"hYNYY":{character: characterList.h, businessType: [btList[17],btList[9], btList[2]]} ,
+		"iYNYY":{character: characterList.i, businessType: [btList[0], btList[10],btList[6]]} ,
 		"aYNYN":{character: characterList.a, businessType: [btList[1], btList[17],btList[0]]} ,
 		"bYNYN":{character: characterList.b, businessType: [btList[17],btList[6], btList[7]]} ,
 		"cYNYN":{character: characterList.c, businessType: [btList[9], btList[17],btList[1]]} ,
@@ -496,16 +496,16 @@ $(function(){
 			value: $(this).attr("value")
 		}
 		
-		// answerList.push(result);
-		// if (++currentQstNum >= questionList.length) {
+		answerList.push(result);
+		if (++currentQstNum >= questionList.length) {
 		// ------------------------------------
-		if (true) {
-			for(var i = 0; i < fstGroup.length; i++) {
-				for (var j = 0; j < 15; j++) { answerList.push( { group: fstGroup[i], value: "N" }); }
-			}
-			for(var i = 0; i < sndGroup.length; i++) {
-				for (var j = 0; j < 5; j++) { answerList.push( { group: sndGroup[i], value: "N" }); }
-			}
+		// if (true) {
+		// 	for(var i = 0; i < fstGroup.length; i++) {
+		// 		for (var j = 0; j < 15; j++) { answerList.push( { group: fstGroup[i], value: "N" }); }
+		// 	}
+		// 	for(var i = 0; i < sndGroup.length; i++) {
+		// 		for (var j = 0; j < 5; j++) { answerList.push( { group: sndGroup[i], value: "N" }); }
+		// 	}
 		// ------------------------------------
 			// 答え終了、結果集計する
 			var resultPattern = "";
