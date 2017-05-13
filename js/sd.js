@@ -576,14 +576,18 @@ $(function(){
 	$("#result-section").on("click", ".save", function() {
 		html2canvas(document.body, {
 	        onrendered: function(canvas){
+	        	var fileName = "result.jpg";
 	          	//aタグのhrefにキャプチャ画像のURLを設定
 				var link = document.createElement('a');
 			    link.href = canvas.toDataURL("image/jpg");
-			    link.download = "result.png";
+			    link.download = fileName;
 			    link.target = "_blank";
 			    link.click();
-			    // TODO IE対応
-			    (window.URL || window.webkitURL).revokeObjectURL(downloadUrl);
+			    if (canvas.msToBlob) { 
+			    	//for IE
+	                var blob = canvas.msToBlob();
+	                window.navigator.msSaveBlob(blob, fileName);
+	            }
 	        }
 	    });
 	});
