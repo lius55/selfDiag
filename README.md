@@ -1,9 +1,9 @@
 # selfDiag
-Web診断アプリ。
+Web診断サイト。
 
 ## Keyword
 - html
 - jquery
--css
+- css
 
 ## Image
