@@ -5,5 +5,6 @@ Web診断サイト。
 - html
 - jquery
 - css
+- responsive
 
 ## Image
